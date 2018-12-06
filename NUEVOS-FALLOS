@@ -1,2 +1,13 @@
 NUEVOS-FALLOS
 -------------
+-Embotelladora: 
+Al adaptar nuestros test a su embotelladora uno de ellos no lo ha pasado (nuestro b3) 
+que contempla el caso en que: total <= miCapacidad y total-5*grandes<0. Su código devuelve un número 
+negativo para pequenasNecesarias cuando debería devolver 0. Para corregir el fallo, añadimos en su código 
+de Embotelladora.java lo siguiente:
+  if (pequenasNecesarias < 0) {    
+			pequenasNecesarias = 0;
+  }
+test original: https://github.com/apayol/repo-isi/blob/master/Caso3-Embotelladora/EmbotelladoraTest.java
+test adaptado: https://github.com/apayol/repo-isi/blob/master/Caso3-Embotelladora/EmbotelladoraModificado/MiEmbotelladoraTestAdaptado.java
+código corregido: https://github.com/apayol/repo-isi/blob/master/Caso3-Embotelladora/EmbotelladoraModificado/Embotelladora.java
