@@ -11,3 +11,45 @@ de Embotelladora.java lo siguiente:
 test original: https://github.com/apayol/repo-isi/blob/master/Caso3-Embotelladora/EmbotelladoraTest.java
 test adaptado: https://github.com/apayol/repo-isi/blob/master/Caso3-Embotelladora/EmbotelladoraModificado/MiEmbotelladoraTestAdaptado.java
 código corregido: https://github.com/apayol/repo-isi/blob/master/Caso3-Embotelladora/EmbotelladoraModificado/Embotelladora.java
+
+
+-NumerosRomanos:
+	test original:
+	-En RomanNumeral.java al compilar con el main que tenían puesto, no funcionaba por que les faltaban las " ".
+	-En RomanNumeral.java al probar con los ejemplos que ellos tenían, les salían algunos errores como por ejemplo:
+		"vi" = 10
+		"xii" = 30
+		"cd" = 0
+	-Uso de código repetido, como por ejemplo:
+		if (m>3) {
+			throw new RuntimeException("más de tres letras iguales");
+		}
+		if (d>3) {
+			throw new RuntimeException("más de tres letras iguales");
+		}
+		if (c>3) {
+			throw new RuntimeException("más de tres letras iguales");
+		}
+		if (l>3) {
+			throw new RuntimeException("más de tres letras iguales");
+		}
+		if (x>3) {
+			throw new RuntimeException("más de tres letras iguales");
+		}
+		if (v>3) {
+			throw new RuntimeException("más de tres letras iguales");
+		}
+		if (i>3) {
+			throw new RuntimeException("más de tres letras iguales");
+		}
+		
+	Lo que se podría reducir a:
+	  if (i>3 ||v>3 ||x>3 ||l>3 || c>3 ||d>3 || m>3) {
+			throw new RuntimeException("más de tres letras iguales");
+		}
+	-RomanNumeralTest, añadidos más ejemplos y reducido el código.
+	-Creados 2 test, uno con todos los números romanos a True y otro con todos los números romanos a False.
+	
+	
+	
+	
