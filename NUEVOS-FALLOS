@@ -14,7 +14,7 @@ código corregido: https://github.com/apayol/repo-isi/blob/master/Caso3-Embotell
 
 
 -NumerosRomanos:
-	test original:
+	test original:https://github.com/apayol/repo-isi/blob/master/Caso2-romanos/RomanNumeralTest.java
 	-En RomanNumeral.java al compilar con el main que tenían puesto, no funcionaba por que les faltaban las " ".
 	-En RomanNumeral.java al probar con los ejemplos que ellos tenían, les salían algunos errores como por ejemplo:
 		"vi" = 10
@@ -49,7 +49,7 @@ código corregido: https://github.com/apayol/repo-isi/blob/master/Caso3-Embotell
 		}
 	-RomanNumeralTest, añadidos más ejemplos y reducido el código.
 	-Creados 2 test, uno con todos los números romanos a True y otro con todos los números romanos a False.
-	
+	test modificado:https://github.com/apayol/repo-isi/blob/master/Caso2-romanosModificado/RomanNumeralTest.java
 	
 	
 	
