@@ -50,6 +50,49 @@ código corregido: https://github.com/apayol/repo-isi/blob/master/Caso3-Embotell
 	-RomanNumeralTest, añadidos más ejemplos y reducido el código.
 	-Creados 2 test, uno con todos los números romanos a True y otro con todos los números romanos a False.
 	test modificado:https://github.com/apayol/repo-isi/blob/master/Caso2-romanosModificado/RomanNumeralTest.java
+
+-BlackFriday:
+Vemos que se comprueba si la fecha en cuestión es o no es black friday.
+Pero no tenemos ningún test que nos indique si el precio es valido o no lo es.
+Esto se puede comprobar haciendo un caso de si el precio es menor que cero, y otro caso si el precio es mayor o igual a cero.
+Lo que se puede implementar tal que:
 	
+
+	if ((cal.get(Calendar.MONTH) == calNow.get(Calendar.MONTH))&&(cal.get(Calendar.DATE) == calNow.get(Calendar.DATE)))
+ 
+		{
+
+			return (0.7*PrecioOriginal); //descuento del 30%
+
+		}else if (PrecioOriginal > 0){
+
+			return (0.7*PrecioOriginal);
+
+
+		}else if (PrecioOriginal <= 0) {
+
+			throw new IllegalArgumentException("Precio invalido");
+
+		}else if (fecha.getMonthValue() == 11 && fecha.getDayOfMonth()==23) {
+
+			return (0.7*PrecioOriginal);
+
+		}else {
+
+			return PrecioOriginal;
+		}
+
+-Bisiestos:
+No vemos que falte ningún test. Se comprueba cuando un año es divisible entre 4 pero no entre 100. Se comprueba cuando un año es divisible entre 4, entre 100 y entre 400. Se comprueba también para el restp de años.
+Además se comprueba cuando se trata de un año negativo.
+Se ha optimizado algo el código sacando las variables de los años fuera de cada metodo de test:
+
+	public class BisiestosTestModificado {
+
+		Bisiestos bisiesto = new Bisiestos();   	// Test fixture
+		int a=2004;
+		int b=1600;
+		int c=1;
+		int d=-1;
 	
 	
